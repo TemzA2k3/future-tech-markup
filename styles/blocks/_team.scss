@@ -8,6 +8,15 @@
     background-color: var(--color-dark-10);
     border-radius: rem(100);
 
+    @include laptop {
+        --personImageSize: #{rem(60)};
+        padding: rem(8);
+    }
+
+    @include tablet {
+        --personImageSize: #{rem(40)};
+    }
+
     &__person {
         width: var(--personImageSize);
         height: var(--personImageSize);
@@ -15,6 +24,10 @@
         border: rem(2) solid var(--color-dark-40);
         border-radius: 50%;
         object-fit: cover;
+
+        @include laptop {
+            border-width: rem(1);
+        }
     
         @include laptop {
           border-width: rem(1);
